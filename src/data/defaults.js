@@ -12,4 +12,4 @@ export const BADGES = [
   {id:'boss',name:'보스 브레이커',desc:'주간 보스 첫 격파',icon:'Swords'}
 ];
 
-export const INITIAL_STATE = { schemaVersion:1, settings:{theme:'dark'}, habits:DEFAULT_HABITS, records:{}, player:{totalXp:0,coins:0,badges:[],createdAt:new Date().toISOString()}, transactions:[], weekly:{} };
+export const INITIAL_STATE = { schemaVersion:2, settings:{theme:'dark'}, habits:DEFAULT_HABITS, records:{}, player:{totalXp:0,coins:0,badges:[],companionName:'',createdAt:new Date().toISOString()}, transactions:[], weekly:{} };
