@@ -9,6 +9,7 @@ export function recompute(state){ let xp=0,coins=0,transactions=[],badges=[]; co
   if(transactions.length)badges.push('first'); if(dates.some(d=>recordStats(state.records[d]).score>=100))badges.push('perfect');
   if(state.habits.some(h=>dates.some(d=>streakFor(state.records,d,h.id)>=3)))badges.push('streak3');
   if(state.player.badges.includes('boss')){xp+=50;coins+=30;badges.push('boss')}
-  state.player={...state.player,totalXp:xp,coins,badges:[...new Set(badges)]};state.transactions=transactions;return state;
+  xp+=state.player.bonusXp||0;coins+=state.player.bonusCoins||0;coins-=state.player.spentCoins||0;
+  state.player={...state.player,totalXp:xp,coins:Math.max(0,coins),badges:[...new Set(badges)]};state.transactions=transactions;return state;
 }
 export const bossFor = (state,date) => {const key=weekKey(date),start=key;let damage=0;for(let i=0;i<7;i++){const r=state.records[shiftDate(start,i)];if(r)damage+=recordStats(r).score;}const maxHp=Math.max(500,state.habits.filter(h=>h.active).reduce((s,h)=>s+h.score,0)*5);return {key,maxHp,hp:Math.max(0,maxHp-damage),damage,defeated:damage>=maxHp};};
