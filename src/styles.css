@@ -388,3 +388,17 @@ button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-vis
 @media(max-width:600px){.equipped-bubble.bubble-heart,.equipped-bubble.bubble-cheer{min-width:126px;max-width:146px;padding:12px 15px;font-size:13px}}
 
 @media(max-width:900px){.bottom-nav{grid-template-columns:repeat(4,1fr)}}
+
+/* Illustrated strawberry beret: compact enough to sit naturally between the ears. */
+.equipped-hat.hat-beret{
+  width:86px;height:68px;top:43px;padding:0;border:0;border-radius:0;
+  background:url('/assets/strawberry-beret.png') center/contain no-repeat;
+  color:transparent;box-shadow:none;
+  filter:drop-shadow(0 5px 4px rgba(74,45,54,.22));
+  transform-origin:50% 92%;
+}
+.equipped-hat.hat-beret:before,.equipped-hat.hat-beret:after{display:none}
+.main-avatar .equipped-hat.hat-beret{top:43px}
+@media(max-width:600px){
+  .main-avatar .equipped-hat.hat-beret{width:72px;height:58px;top:40px}
+}
