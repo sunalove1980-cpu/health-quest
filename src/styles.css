@@ -268,3 +268,33 @@ button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-vis
 .growth-summary .growth-level{min-width:0}.growth-summary .growth-level>span{font-size:13px;font-weight:850;color:var(--muted)}.growth-summary .growth-level h3{margin:4px 0 12px;font-size:22px}
 .growth-assets{display:grid;gap:9px}.growth-assets span{display:flex;align-items:center;gap:7px;padding:9px 12px;border-radius:12px;background:color-mix(in srgb,var(--pastel-blue) 24%,var(--panel));font-size:13px;font-weight:850;white-space:nowrap}.growth-assets svg{width:18px}
 @media(max-width:700px){.growth-summary{grid-template-columns:auto 1fr;padding:18px;gap:16px}.growth-assets{grid-column:1/-1;grid-template-columns:1fr 1fr}.level-medal{width:76px;height:76px}.main-avatar .equipped-hat.hat-beret{top:26px}.equipped-bubble.bubble-heart,.equipped-bubble.bubble-cheer{min-width:118px;padding:10px 12px;font-size:12px}}
+
+/* More varied, game-like motion rhythms */
+.main-avatar .character-stage{animation:hero-arrive .9s cubic-bezier(.16,1,.3,1) both,hero-drift 5.8s 1s ease-in-out infinite}
+.main-avatar .growth-face{animation:companion-breathe 3.7s ease-in-out infinite;transform-origin:center bottom}
+.main-avatar .equipped-hat{animation:hat-follow 3.7s ease-in-out infinite;transform-origin:center bottom}
+.main-avatar .equipped-cape.cape-ribbon,.main-avatar .equipped-cape.cape-star{animation:cape-sway 4.4s ease-in-out infinite;transform-origin:center top}
+.main-avatar .equipped-bubble:not(:empty){animation:bubble-pop 4.8s cubic-bezier(.2,.8,.2,1) infinite}
+.quest{transition:transform .38s cubic-bezier(.2,.9,.25,1),box-shadow .38s ease,border-color .3s ease}
+.quest:nth-child(3n+1){animation-delay:.04s}.quest:nth-child(3n+2){animation-delay:.12s}.quest:nth-child(3n){animation-delay:.2s}
+.quest:hover{transform:translateY(-5px) rotate(-.25deg);box-shadow:0 18px 34px color-mix(in srgb,var(--ink) 15%,transparent)}
+.quest:nth-child(even):hover{transform:translateY(-5px) rotate(.25deg)}
+.quest.done{animation:quest-complete .82s cubic-bezier(.2,1.35,.35,1) both}
+.quest.done .quest-icon{animation:portrait-cheer .72s cubic-bezier(.2,1.5,.35,1) both}
+.quest.done .check-square{animation:check-spring .65s cubic-bezier(.2,1.6,.35,1) both}
+.adventure-strip>div:nth-child(1) svg{animation:map-wander 4.8s ease-in-out infinite}.adventure-strip>div:nth-child(2) svg{animation:flame-dance 1.6s ease-in-out infinite}.adventure-strip>div:nth-child(3) svg{animation:gem-glint 3.2s ease-in-out infinite}
+.shop-item:hover .shop-emoji{animation:item-preview .7s cubic-bezier(.2,1.4,.3,1)}
+.app-shell:before{animation:cloud-meander 46s ease-in-out infinite alternate}.app-shell:after{animation:particle-wander 29s linear infinite}
+@keyframes hero-arrive{from{opacity:0;transform:translateY(28px) scale(.94)}65%{opacity:1;transform:translateY(-4px) scale(1.015)}to{transform:none}}
+@keyframes hero-drift{0%,100%{translate:0 0}35%{translate:0 -5px}68%{translate:3px -2px}}
+@keyframes companion-breathe{0%,100%{transform:translateY(0) scale(1)}45%{transform:translateY(-6px) scale(1.018,.988)}55%{transform:translateY(-6px) scale(1.018,.988)}}
+@keyframes hat-follow{0%,100%{translate:0 0;rotate:-1deg}45%,55%{translate:0 -7px;rotate:2deg}}
+@keyframes cape-sway{0%,100%{transform:rotate(-1.4deg) scaleX(.99)}50%{transform:rotate(1.8deg) scaleX(1.025)}}
+@keyframes bubble-pop{0%,78%,100%{transform:translateY(0) scale(1)}84%{transform:translateY(-5px) scale(1.05)}90%{transform:translateY(-1px) scale(.985)}}
+@keyframes quest-complete{0%{transform:scale(1)}35%{transform:scale(1.018) rotate(.3deg)}68%{transform:scale(.994)}100%{transform:scale(1)}}
+@keyframes portrait-cheer{0%{transform:scale(.86) rotate(-8deg)}60%{transform:scale(1.1) rotate(5deg)}100%{transform:scale(1)}}
+@keyframes check-spring{0%{transform:scale(.45) rotate(-18deg)}65%{transform:scale(1.18) rotate(5deg)}100%{transform:scale(1)}}
+@keyframes map-wander{0%,100%{transform:rotate(-3deg)}50%{transform:translateY(-3px) rotate(4deg)}}@keyframes flame-dance{0%,100%{transform:scale(.96) rotate(-3deg)}50%{transform:translateY(-3px) scale(1.08) rotate(4deg)}}@keyframes gem-glint{0%,70%,100%{transform:scale(1);filter:none}78%{transform:scale(1.14) rotate(8deg);filter:drop-shadow(0 0 7px var(--pastel-blue))}}
+@keyframes item-preview{0%{transform:scale(1)}48%{transform:translateY(-7px) scale(1.16) rotate(-6deg)}100%{transform:scale(1)}}
+@keyframes cloud-meander{0%{transform:translate3d(-5%,-1%,0) scale(1)}45%{transform:translate3d(3%,2%,0) scale(1.04)}100%{transform:translate3d(9%,-2%,0) scale(.98)}}@keyframes particle-wander{0%{transform:translate3d(-2%,10%,0) rotate(0)}50%{transform:translate3d(3%,-1%,0) rotate(5deg)}100%{transform:translate3d(-1%,-11%,0) rotate(-3deg)}}
+@media(prefers-reduced-motion:reduce){.main-avatar .character-stage,.main-avatar .growth-face,.main-avatar .equipped-hat,.main-avatar .equipped-cape,.main-avatar .equipped-bubble,.quest.done,.quest.done .quest-icon,.quest.done .check-square,.adventure-strip svg,.shop-item .shop-emoji{animation:none!important}.quest:hover{transform:none}}
