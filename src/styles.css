@@ -396,11 +396,11 @@ button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-vis
 .shop-item.equipped .shop-actions .refund-button{background:transparent}
 
 /* Background-only shop: illustrated destinations replace floating wearables. */
-.main-avatar .character-stage.bg-hotel{background-image:linear-gradient(to top,rgba(255,247,239,.08),transparent 48%),url('/assets/bg-luxury-hotel.webp')}
-.main-avatar .character-stage.bg-pension{background-image:linear-gradient(to top,rgba(255,244,220,.08),transparent 52%),url('/assets/bg-cozy-pension.webp')}
-.main-avatar .character-stage.bg-pool{background-image:linear-gradient(to top,rgba(224,250,255,.07),transparent 48%),url('/assets/bg-resort-pool.webp')}
-.main-avatar .character-stage.bg-party{background-image:linear-gradient(to top,rgba(255,234,220,.08),transparent 45%),url('/assets/bg-garden-party.webp')}
-.main-avatar .character-stage.bg-bbq{background-image:linear-gradient(to top,rgba(255,216,164,.08),transparent 48%),url('/assets/bg-bbq-garden.webp')}
+.main-avatar .character-stage.bg-hotel{background-image:linear-gradient(to top,rgba(255,247,239,.08),transparent 48%),url('/assets/scene-hotel.webp')}
+.main-avatar .character-stage.bg-pension{background-image:linear-gradient(to top,rgba(255,244,220,.08),transparent 52%),url('/assets/scene-pension.webp')}
+.main-avatar .character-stage.bg-pool{background-image:linear-gradient(to top,rgba(224,250,255,.07),transparent 48%),url('/assets/scene-pool.webp')}
+.main-avatar .character-stage.bg-party{background-image:linear-gradient(to top,rgba(255,234,220,.08),transparent 45%),url('/assets/scene-party.webp')}
+.main-avatar .character-stage.bg-bbq{background-image:linear-gradient(to top,rgba(255,216,164,.08),transparent 48%),url('/assets/scene-bbq.webp')}
 .main-avatar .character-stage.bg-hotel,.main-avatar .character-stage.bg-pension,.main-avatar .character-stage.bg-pool,.main-avatar .character-stage.bg-party,.main-avatar .character-stage.bg-bbq{background-size:cover;background-position:center 54%;box-shadow:inset 0 -30px 44px rgba(48,42,55,.09),0 18px 38px color-mix(in srgb,var(--ink) 13%,transparent)}
 .main-avatar .character-stage.bg-hotel:before{background:radial-gradient(circle at 22% 28%,rgba(255,255,255,.8) 0 2px,transparent 3px),radial-gradient(circle at 76% 18%,rgba(255,248,220,.8) 0 2px,transparent 3px);background-size:155px 183px;animation:hotel-glint 7s ease-in-out infinite}
 .main-avatar .character-stage.bg-pension:before{background:linear-gradient(115deg,transparent 35%,rgba(255,246,210,.16) 48%,transparent 61%);animation:sunbeam 8s ease-in-out infinite}
@@ -414,7 +414,7 @@ button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-vis
 @keyframes ember-glow{0%,100%{opacity:.22;filter:blur(.2px)}50%{opacity:.58;filter:blur(1px);transform:translateY(-3px)}}
 .shop-preview{width:100%;height:auto;aspect-ratio:4/3;border-radius:16px;background-size:cover;background-position:center;font-size:31px}
 .shop-preview.bg-hotel,.shop-preview.bg-pension,.shop-preview.bg-pool,.shop-preview.bg-party,.shop-preview.bg-bbq{font-size:0}
-.shop-preview.bg-hotel{background-image:url('/assets/bg-luxury-hotel.webp')}.shop-preview.bg-pension{background-image:url('/assets/bg-cozy-pension.webp')}.shop-preview.bg-pool{background-image:url('/assets/bg-resort-pool.webp')}.shop-preview.bg-party{background-image:url('/assets/bg-garden-party.webp')}.shop-preview.bg-bbq{background-image:url('/assets/bg-bbq-garden.webp')}
+.shop-preview.bg-hotel{background-image:url('/assets/scene-hotel.webp')}.shop-preview.bg-pension{background-image:url('/assets/scene-pension.webp')}.shop-preview.bg-pool{background-image:url('/assets/scene-pool.webp')}.shop-preview.bg-party{background-image:url('/assets/scene-party.webp')}.shop-preview.bg-bbq{background-image:url('/assets/scene-bbq.webp')}
 @media(prefers-reduced-motion:reduce){.main-avatar .character-stage.bg-hotel:before,.main-avatar .character-stage.bg-pension:before,.main-avatar .character-stage.bg-pool:before,.main-avatar .character-stage.bg-party:before,.main-avatar .character-stage.bg-bbq:before{animation:none!important}}
 
 /* Complete seasonal transformations: character, outfit and location are one scene. */
@@ -449,3 +449,25 @@ html[data-reaction=jump] .transformation-scene .scene-character-motion{animation
 @keyframes scene-leaves{from{background-position:0 -230px,30px -310px,75px -190px;transform:rotate(0)}to{background-position:120px 690px,-85px 770px,155px 730px;transform:rotate(4deg)}}
 @keyframes scene-snow{from{background-position:0 -210px,45px -300px,90px -360px}to{background-position:42px 690px,-12px 780px,128px 850px}}
 @media(prefers-reduced-motion:reduce){.character-idle,.scene-character-motion,.season-particles{animation:none!important}.season-particles{opacity:.22}}
+
+/* Five more complete transformations, with location-specific ambient motion. */
+.main-avatar .character-stage.transformation-scene.bg-hotel{background-image:url('/assets/scene-hotel.webp')}.main-avatar .character-stage.transformation-scene.bg-pension{background-image:url('/assets/scene-pension.webp')}.main-avatar .character-stage.transformation-scene.bg-pool{background-image:url('/assets/scene-pool.webp')}.main-avatar .character-stage.transformation-scene.bg-party{background-image:url('/assets/scene-party.webp')}.main-avatar .character-stage.transformation-scene.bg-bbq{background-image:url('/assets/scene-bbq.webp')}
+.transformation-scene.bg-hotel .scene-character-motion{background-image:url('/assets/scene-hotel.webp')}.transformation-scene.bg-pension .scene-character-motion{background-image:url('/assets/scene-pension.webp')}.transformation-scene.bg-pool .scene-character-motion{background-image:url('/assets/scene-pool.webp')}.transformation-scene.bg-party .scene-character-motion{background-image:url('/assets/scene-party.webp')}.transformation-scene.bg-bbq .scene-character-motion{background-image:url('/assets/scene-bbq.webp')}
+.shop-preview.bg-hotel{background-image:url('/assets/scene-hotel.webp')}.shop-preview.bg-pension{background-image:url('/assets/scene-pension.webp')}.shop-preview.bg-pool{background-image:url('/assets/scene-pool.webp')}.shop-preview.bg-party{background-image:url('/assets/scene-party.webp')}.shop-preview.bg-bbq{background-image:url('/assets/scene-bbq.webp')}
+.bg-hotel .season-particles,.bg-pension .season-particles,.bg-party .season-particles,.bg-bbq .season-particles{display:block;background-image:radial-gradient(circle at 16% 12%,rgba(255,247,203,.95) 0 3px,transparent 5px),radial-gradient(circle at 59% 4%,rgba(255,255,255,.85) 0 2px,transparent 4px),radial-gradient(circle at 88% 21%,rgba(255,218,154,.9) 0 3px,transparent 5px);background-size:121px 157px,173px 223px,207px 259px;animation:scene-lights 6.5s ease-in-out infinite}.bg-hotel .season-particles-front,.bg-party .season-particles-front{animation-duration:9s;animation-delay:-3s;filter:blur(.35px)}
+.bg-pension .season-particles{opacity:.38;background-image:radial-gradient(circle,rgba(255,226,157,.8) 0 2px,transparent 4px);background-size:83px 101px;animation:scene-motes 9s linear infinite}.bg-pension .season-particles-front{animation-duration:13s;filter:blur(.5px)}
+.bg-pool .season-particles{display:block;inset:auto -25% 0;height:43%;background:repeating-radial-gradient(ellipse at 50% 115%,transparent 0 16px,rgba(255,255,255,.48) 18px 21px,transparent 23px 38px);animation:scene-water 4.8s ease-in-out infinite}.bg-pool .season-particles-front{height:24%;opacity:.62;animation-duration:7.2s;filter:blur(.3px)}
+.bg-party .season-particles-front{background-image:radial-gradient(circle at 16% 12%,#ffe9a8 0 3px,transparent 5px),radial-gradient(ellipse at 59% 4%,#efb8c6 0 3px,transparent 5px),radial-gradient(circle at 88% 21%,#fff5db 0 3px,transparent 5px);animation-name:scene-confetti}
+.bg-bbq .season-particles{background-image:radial-gradient(circle at 15% 8%,#ffbd62 0 3px,transparent 5px),radial-gradient(circle at 57% 19%,#ffe1a1 0 2px,transparent 4px),radial-gradient(circle at 86% 2%,#e77b45 0 3px,transparent 5px);animation:scene-embers 7.5s ease-in-out infinite}.bg-bbq .season-particles-front{animation-duration:10.5s;filter:blur(.45px)}
+@keyframes scene-lights{0%,100%{opacity:.22;transform:translateY(3px);filter:brightness(.85)}50%{opacity:.78;transform:translateY(-3px);filter:brightness(1.25)}}
+@keyframes scene-motes{from{background-position:0 230px;transform:translateX(-7px)}to{background-position:45px -530px;transform:translateX(8px)}}
+@keyframes scene-confetti{from{background-position:0 -160px,30px -220px,75px -190px;transform:rotate(0)}to{background-position:65px 650px,-45px 720px,118px 680px;transform:rotate(3deg)}}
+@keyframes scene-embers{0%,100%{background-position:0 210px,40px 260px,80px 190px;opacity:.18}50%{background-position:35px -120px,-15px -180px,112px -145px;opacity:.72}}
+
+/* Mystery presentation: paid scenes are revealed only after purchase. */
+.shop-item .shop-clue{min-height:34px;margin:-5px 0 12px;color:var(--muted);font-size:12px;line-height:1.4}
+.shop-item.mystery .shop-preview{position:relative;background-image:linear-gradient(145deg,color-mix(in srgb,var(--pastel-blue) 62%,var(--panel)),color-mix(in srgb,var(--pastel-pink) 55%,var(--panel)))!important;filter:none;font-size:0;overflow:hidden}
+.shop-item.mystery .shop-preview:before{content:"";position:absolute;inset:12%;border-radius:50% 50% 42% 42%;background:color-mix(in srgb,var(--ink) 12%,transparent);filter:blur(8px);transform:scale(.72)}
+.shop-item.mystery .shop-preview:after{content:"?";position:absolute;inset:0;display:grid;place-items:center;color:color-mix(in srgb,var(--ink) 72%,var(--pastel-pink));font-size:42px;font-weight:900;text-shadow:0 2px 0 rgba(255,255,255,.45)}
+.shop-item.mystery h3{color:color-mix(in srgb,var(--ink) 78%,var(--muted))}
+@media(prefers-reduced-motion:reduce){.bg-hotel .season-particles,.bg-pension .season-particles,.bg-pool .season-particles,.bg-party .season-particles,.bg-bbq .season-particles{animation:none!important}}
