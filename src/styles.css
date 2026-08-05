@@ -112,3 +112,23 @@ aside nav button.active{color:var(--ink);background:color-mix(in srgb,var(--past
 .danger-btn{background:color-mix(in srgb,var(--pastel-pink) 28%,var(--pastel-cream));border-color:var(--pastel-pink);color:var(--ink)}
 @media(max-width:900px){.cute-hero .hero-hud{background:color-mix(in srgb,var(--pastel-cream) 90%,transparent)}}
 @media(max-width:600px){.cute-hero:before{background:linear-gradient(90deg,var(--pastel-cream),color-mix(in srgb,var(--pastel-cream) 72%,transparent) 68%,transparent)}}
+
+/* Supportive companion interactions */
+body{font-size:17px;line-height:1.55}
+p,.score-card p,.page-title p,.insights p,.rate-card p,.notice p{font-size:15px;line-height:1.65}
+.quest h3{font-size:19px;line-height:1.35;margin-bottom:12px}.section-head h2,.page-title h2{font-size:32px}.card-title h3,.memo h3{font-size:20px}
+.eyebrow,.mission-tag,.rarity,.card-title span,.insights article span{font-size:11px}.rewards span{font-size:12px}.adventure-strip span,.setting-row span{font-size:13px}
+.cute-hero{background-blend-mode:normal,normal;background-position:center;filter:none}
+.cute-hero:before{opacity:.78}.cute-hero h2{font-size:clamp(42px,5vw,64px)}.mascot-talk{font-size:14px}.battle-btn{font-size:16px}
+.welcome-praise{display:flex;align-items:center;gap:18px;margin:0 0 20px;padding:18px 22px;border:1px solid var(--line);border-radius:24px;background:linear-gradient(110deg,color-mix(in srgb,var(--pastel-pink) 34%,var(--pastel-cream)),color-mix(in srgb,var(--pastel-blue) 38%,var(--pastel-cream)));box-shadow:var(--shadow)}
+.welcome-praise strong{display:block;font-size:20px;line-height:1.4}.welcome-praise p{margin:5px 0 0;color:var(--muted)}
+.companion-face{display:block;width:100%;height:100%;border-radius:inherit;background-image:url('/assets/companion-expressions.png');background-repeat:no-repeat;background-size:200% 200%;background-color:var(--pastel-cream)}
+.companion-face.mood-0{background-position:0 0}.companion-face.mood-1{background-position:100% 0}.companion-face.mood-2{background-position:0 100%}.companion-face.mood-3{background-position:100% 100%}
+.welcome-praise>.companion-face{width:72px;height:72px;flex:0 0 auto;border:3px solid var(--pastel-cream);box-shadow:0 8px 22px color-mix(in srgb,var(--pastel-pink) 30%,transparent)}
+.quest-icon{width:58px;height:58px;padding:0;overflow:hidden;border:3px solid var(--pastel-cream);background:var(--pastel-cream)}
+.due-time{display:flex;align-items:center;gap:7px;margin:0 0 10px;color:var(--muted);font-size:13px;font-weight:700}.due-time svg{width:16px;flex:0 0 auto}.due-time span{white-space:nowrap}.due-time input{min-height:36px;width:112px;margin-left:auto;padding:5px 8px;border:1px solid var(--line);border-radius:10px;background:var(--pastel-cream);color:var(--ink)}
+.gentle-message{margin:4px 0 10px;padding:8px 10px;border-radius:10px;background:color-mix(in srgb,var(--pastel-pink) 25%,var(--pastel-cream));color:var(--ink);font-size:13px!important;line-height:1.5!important}
+.check,.done .check{width:48px;height:48px;border-radius:12px;border:2px solid color-mix(in srgb,var(--ink) 35%,var(--pastel-blue));background:var(--pastel-cream);box-shadow:inset 0 0 0 4px var(--pastel-cream)}
+.done .check{background:var(--pastel-blue);border-color:color-mix(in srgb,var(--ink) 45%,var(--pastel-blue));color:var(--ink)}.check svg{width:26px;height:26px;stroke-width:3}
+.loot-burst{min-width:min(420px,88vw);text-align:center}.loot-burst>.companion-face{position:relative;z-index:1;width:92px;height:92px;border-radius:50%;border:4px solid var(--pastel-cream)}.loot-burst p{position:relative;z-index:1;max-width:300px;margin:4px 0 8px;font-weight:750;font-size:16px}
+@media(max-width:600px){body{font-size:16px}.welcome-praise{padding:15px;gap:12px;border-radius:19px}.welcome-praise>.companion-face{width:58px;height:58px}.welcome-praise strong{font-size:17px}.welcome-praise p{font-size:13px}.cute-hero h2{font-size:38px}.quest h3{font-size:18px}.section-head h2,.page-title h2{font-size:26px}.quest-icon{width:54px;height:54px}.due-time{flex-wrap:wrap}.due-time input{margin-left:0}.loot-burst{padding:24px 18px}}
