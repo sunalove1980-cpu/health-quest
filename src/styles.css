@@ -299,3 +299,14 @@ button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-vis
 @keyframes item-preview{0%{transform:scale(1)}48%{transform:translateY(-7px) scale(1.16) rotate(-6deg)}100%{transform:scale(1)}}
 @keyframes cloud-meander{0%{transform:translate3d(-5%,-1%,0) scale(1)}45%{transform:translate3d(3%,2%,0) scale(1.04)}100%{transform:translate3d(9%,-2%,0) scale(.98)}}@keyframes particle-wander{0%{transform:translate3d(-2%,10%,0) rotate(0)}50%{transform:translate3d(3%,-1%,0) rotate(5deg)}100%{transform:translate3d(-1%,-11%,0) rotate(-3deg)}}
 @media(prefers-reduced-motion:reduce){.main-avatar .character-stage,.main-avatar .growth-face,.main-avatar .equipped-hat,.main-avatar .equipped-cape,.main-avatar .equipped-bubble,.quest.done,.quest.done .quest-icon,.quest.done .check-square,.adventure-strip svg,.shop-item .shop-emoji{animation:none!important}.quest:hover{transform:none}}
+
+/* Full-body companion: portrait sprites stay unchanged elsewhere */
+.companion-face.full-body{background-image:url('/assets/companion-fullbody.png');background-size:200% 200%;border-radius:28px}
+.companion-face.full-body:before{display:none}
+.full-body-frame{width:224px;height:292px;border-radius:32px;border-width:5px;background:var(--panel);overflow:hidden!important;box-shadow:0 18px 34px rgba(48,42,55,.2)}
+.main-avatar .character-stage{min-height:410px;padding-top:8px}
+.main-avatar .growth-face.full-body-frame{width:238px;height:314px}
+.main-avatar .equipped-hat{top:29px}.main-avatar .equipped-hat.hat-beret{top:39px}
+.main-avatar .equipped-cape{width:292px;height:250px;bottom:31px}
+.main-avatar .equipped-bubble{right:18px;top:76px}
+@media(max-width:600px){.main-avatar .character-stage{min-height:350px}.main-avatar .growth-face.full-body-frame{width:200px;height:264px}.main-avatar .equipped-cape{width:248px;height:214px;bottom:26px}.main-avatar .equipped-hat{top:27px}.main-avatar .equipped-hat.hat-beret{top:36px}}
