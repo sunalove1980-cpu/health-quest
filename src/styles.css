@@ -416,3 +416,15 @@ button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-vis
 .shop-preview.bg-hotel,.shop-preview.bg-pension,.shop-preview.bg-pool,.shop-preview.bg-party,.shop-preview.bg-bbq{font-size:0}
 .shop-preview.bg-hotel{background-image:url('/assets/bg-luxury-hotel.webp')}.shop-preview.bg-pension{background-image:url('/assets/bg-cozy-pension.webp')}.shop-preview.bg-pool{background-image:url('/assets/bg-resort-pool.webp')}.shop-preview.bg-party{background-image:url('/assets/bg-garden-party.webp')}.shop-preview.bg-bbq{background-image:url('/assets/bg-bbq-garden.webp')}
 @media(prefers-reduced-motion:reduce){.main-avatar .character-stage.bg-hotel:before,.main-avatar .character-stage.bg-pension:before,.main-avatar .character-stage.bg-pool:before,.main-avatar .character-stage.bg-party:before,.main-avatar .character-stage.bg-bbq:before{animation:none!important}}
+
+/* Complete seasonal transformations: character, outfit and location are one scene. */
+.main-avatar .character-stage.transformation-scene{width:100%;min-height:0;aspect-ratio:2/3;background-size:cover;background-position:center;border-radius:34px;animation:transformation-reveal .7s cubic-bezier(.16,1,.3,1) both}
+.main-avatar .character-stage.transformation-scene.bg-cloud{background-image:url('/assets/scene-spring.webp')}
+.main-avatar .character-stage.transformation-scene.bg-sunset{background-image:url('/assets/scene-summer.webp')}
+.main-avatar .character-stage.transformation-scene.bg-autumn{background-image:url('/assets/scene-autumn.webp')}
+.main-avatar .character-stage.transformation-scene.bg-winter{background-image:url('/assets/scene-winter.webp')}
+.shop-preview.bg-cloud{background-image:url('/assets/scene-spring.webp')}.shop-preview.bg-sunset{background-image:url('/assets/scene-summer.webp')}.shop-preview.bg-autumn{background-image:url('/assets/scene-autumn.webp')}.shop-preview.bg-winter{background-image:url('/assets/scene-winter.webp')}
+.shop-preview.bg-cloud,.shop-preview.bg-sunset,.shop-preview.bg-autumn,.shop-preview.bg-winter{font-size:0}
+@keyframes transformation-reveal{0%{opacity:.25;transform:scale(.975);filter:saturate(.8)}100%{opacity:1;transform:scale(1);filter:saturate(1)}}
+@media(max-width:600px){.main-avatar .character-stage.transformation-scene{aspect-ratio:2/3;border-radius:26px}}
+@media(prefers-reduced-motion:reduce){.main-avatar .character-stage.transformation-scene{animation:none!important}}
