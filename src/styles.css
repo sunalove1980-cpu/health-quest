@@ -370,3 +370,19 @@ button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-vis
 @keyframes grounded-smile{0%{opacity:.2;transform:scale(.985)}30%{opacity:1;transform:scale(1.012) rotate(-.45deg)}65%{transform:scale(1.004) rotate(.4deg)}100%{transform:scale(1)}}
 @keyframes grounded-wink{0%{opacity:.2;transform:scale(.985) rotate(.4deg)}32%{opacity:1;transform:scale(1.01) rotate(-.7deg)}68%{transform:scale(1.003) rotate(.25deg)}100%{transform:scale(1)}}
 @keyframes hat-breathe{0%,100%{transform:rotate(-.4deg)}50%{transform:rotate(.5deg) scale(1.006)}}
+
+/* Soft cloud speech bubble with a dedicated editorial serif */
+@font-face{font-family:'ChosunIlboMyungjo';src:url('/assets/Chosunilbo_myungjo.woff') format('woff');font-weight:400;font-style:normal;font-display:swap}
+.equipped-bubble.bubble-heart,.equipped-bubble.bubble-cheer{
+  min-width:142px;max-width:168px;padding:15px 19px 14px;
+  border:1px solid color-mix(in srgb,var(--ink) 16%,transparent);
+  border-radius:42% 58% 46% 54% / 56% 48% 52% 44%;
+  background:color-mix(in srgb,var(--panel) 94%,var(--pastel-cream));
+  color:color-mix(in srgb,var(--ink) 88%,var(--pastel-pink));
+  font-family:'ChosunIlboMyungjo','Batang','바탕',serif;
+  font-size:15px;font-weight:400;line-height:1.5;letter-spacing:-.015em;
+  box-shadow:0 8px 22px color-mix(in srgb,var(--ink) 10%,transparent),inset 0 1px rgba(255,255,255,.8);
+}
+.equipped-bubble.bubble-heart:before,.equipped-bubble.bubble-cheer:before{content:"";position:absolute;z-index:-1;left:20px;top:-9px;width:42px;height:24px;border:1px solid color-mix(in srgb,var(--ink) 12%,transparent);border-bottom:0;border-radius:50% 55% 0 0;background:color-mix(in srgb,var(--panel) 94%,var(--pastel-cream));box-shadow:43px 2px 0 -3px color-mix(in srgb,var(--panel) 94%,var(--pastel-cream))}
+.equipped-bubble.bubble-heart:after,.equipped-bubble.bubble-cheer:after{left:25px;bottom:-10px;width:17px;height:17px;border:0;border-right:1px solid color-mix(in srgb,var(--ink) 16%,transparent);border-bottom:1px solid color-mix(in srgb,var(--ink) 16%,transparent);border-radius:0 0 7px 0;background:color-mix(in srgb,var(--panel) 94%,var(--pastel-cream));transform:skew(10deg) rotate(38deg);box-shadow:4px 4px 7px color-mix(in srgb,var(--ink) 5%,transparent)}
+@media(max-width:600px){.equipped-bubble.bubble-heart,.equipped-bubble.bubble-cheer{min-width:126px;max-width:146px;padding:12px 15px;font-size:13px}}
