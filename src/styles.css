@@ -139,3 +139,24 @@ p,.score-card p,.page-title p,.insights p,.rate-card p,.notice p{font-size:15px;
 .done .check{background:var(--pastel-blue)}.done .check-square{background:var(--pastel-blue)}
 .reminder-button,.reminder-ready{min-height:38px;padding:7px 11px;border:1px solid var(--line);border-radius:12px;background:color-mix(in srgb,var(--pastel-pink) 32%,var(--pastel-cream));color:var(--ink);display:flex;align-items:center;gap:6px;font-size:12px;font-weight:800;white-space:nowrap}.reminder-button{cursor:pointer}.reminder-button svg,.reminder-ready svg{width:17px;height:17px}.reminder-ready{background:color-mix(in srgb,var(--pastel-blue) 42%,var(--pastel-cream))}
 @media(max-width:600px){.reminder-button,.reminder-ready{position:fixed;right:12px;bottom:calc(82px + env(safe-area-inset-bottom));z-index:48;min-height:42px;box-shadow:var(--shadow)}.wallet .reminder-ready,.wallet .reminder-button{display:flex}.check,.done .check{width:82px;min-height:58px}.check small{font-size:11px}}
+
+/* Korean-friendly line wrapping */
+body,h1,h2,h3,h4,p,span,strong,small,label,button,a,li,td,th{
+  word-break:keep-all;
+  overflow-wrap:break-word;
+}
+h1,h2,h3,h4,.welcome-praise strong,.mascot-talk,.campaign-card h3{
+  text-wrap:balance;
+}
+p,.gentle-message,.choice-card small,.notice p{
+  text-wrap:pretty;
+}
+.game-hero h2 br{display:none}
+.game-hero h2 em{display:inline}
+.check small,.reminder-button,.reminder-ready,.battle-btn,.bottom-nav button span{
+  white-space:nowrap;
+}
+@media(max-width:600px){
+  .game-hero h2{max-width:330px;line-height:1.24}
+  .welcome-praise>div,.quest-copy,.campaign-card>div{min-width:0}
+}
