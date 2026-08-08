@@ -391,9 +391,6 @@ button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-vis
 
 /* Clear secondary action for returning a purchased shop item. */
 .shop-actions{display:grid;gap:8px}
-.shop-actions .refund-button{display:flex;align-items:center;justify-content:center;gap:6px;background:transparent;color:var(--ink);border:1px solid color-mix(in srgb,var(--ink) 24%,transparent);box-shadow:none}
-.shop-actions .refund-button svg{width:16px;height:16px}
-.shop-item.equipped .shop-actions .refund-button{background:transparent}
 
 /* Background-only shop: illustrated destinations replace floating wearables. */
 .main-avatar .character-stage.bg-hotel{background-image:linear-gradient(to top,rgba(255,247,239,.08),transparent 48%),url('/assets/scene-hotel.webp')}
