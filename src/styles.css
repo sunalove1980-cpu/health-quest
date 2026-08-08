@@ -467,6 +467,19 @@ html[data-reaction=jump] .transformation-scene .scene-character-motion{animation
 html[data-reaction=jump] .transformation-scene .scene-animation-frame{animation:scene-expression-cycle 10s step-end infinite,scene-character-jump .78s cubic-bezier(.2,1.4,.3,1)}
 html[data-reaction=wave] .transformation-scene .scene-animation-frame{animation:scene-expression-cycle 10s step-end infinite,scene-character-wave .9s cubic-bezier(.2,1.2,.3,1)}
 @media(prefers-reduced-motion:reduce){.scene-animation-frame{animation:none!important;background-position:0 0}}
+
+/* 오늘의 퀘스트는 실행에 필요한 이름·목표 시간·입력·체크만 남긴다. */
+.compact-quest{min-height:82px;padding:13px 15px;gap:12px;align-items:center}
+.compact-quest .quest-copy{display:grid;gap:7px}
+.quest-title-row{display:flex;align-items:center;gap:12px;min-width:0}
+.compact-quest h3{flex:1;min-width:0;margin:0;font-size:17px;line-height:1.35}
+.compact-quest .due-time{flex:0 0 auto;margin:0;gap:5px;font-size:12px}
+.compact-quest .due-time input{width:102px;min-height:34px;margin:0;padding:4px 6px}
+.compact-quest .gentle-message{margin:0;padding:6px 9px;font-size:12px!important;line-height:1.4!important}
+.compact-quest .number-entry{max-width:170px}
+.compact-quest .check,.compact-quest.done .check{width:64px;min-height:54px;padding:5px;gap:2px}
+.compact-quest .check small{font-size:11px}
+@media(max-width:600px){.compact-quest{min-height:76px;padding:11px 12px}.quest-title-row{gap:8px}.compact-quest h3{font-size:16px}.compact-quest .due-time span{display:none}.compact-quest .due-time input{width:94px}.compact-quest .check,.compact-quest.done .check{width:58px;min-height:52px}}
 .shop-preview.bg-hotel{background-image:url('/assets/scene-hotel.webp')}.shop-preview.bg-pension{background-image:url('/assets/scene-pension.webp')}.shop-preview.bg-pool{background-image:url('/assets/scene-pool.webp')}.shop-preview.bg-party{background-image:url('/assets/scene-party.webp')}.shop-preview.bg-bbq{background-image:url('/assets/scene-bbq.webp')}
 .bg-hotel .season-particles,.bg-pension .season-particles,.bg-party .season-particles,.bg-bbq .season-particles{display:block;background-image:radial-gradient(circle at 16% 12%,rgba(255,247,203,.95) 0 3px,transparent 5px),radial-gradient(circle at 59% 4%,rgba(255,255,255,.85) 0 2px,transparent 4px),radial-gradient(circle at 88% 21%,rgba(255,218,154,.9) 0 3px,transparent 5px);background-size:121px 157px,173px 223px,207px 259px;animation:scene-lights 6.5s ease-in-out infinite}.bg-hotel .season-particles-front,.bg-party .season-particles-front{animation-duration:9s;animation-delay:-3s;filter:blur(.35px)}
 .bg-pension .season-particles{opacity:.38;background-image:radial-gradient(circle,rgba(255,226,157,.8) 0 2px,transparent 4px);background-size:83px 101px;animation:scene-motes 9s linear infinite}.bg-pension .season-particles-front{animation-duration:13s;filter:blur(.5px)}
